@@ -216,6 +216,7 @@ document.getElementById('form').addEventListener('submit', function (e) {
   if (!name) { err.textContent = 'Add your name to join.'; n.focus(); return; }
   if (!/^\S+@\S+\.\S+$/.test(email)) { err.textContent = 'Add a valid email address.'; m.focus(); return; }
   err.textContent = '';
+  if (SHEET_URL.indexOf('/exec') === -1) { err.textContent = 'Signups are paused. Please try again shortly.'; console.error('SHEET_URL is not set'); return; }
   btn.disabled = true; btn.textContent = 'SENDING…';
   var data = new URLSearchParams(new FormData(form));
   fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body: data })
