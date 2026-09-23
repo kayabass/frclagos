@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRC Lagos — Join the waitlist</title>
+<meta name="description" content="Founders Running Club is launching in Lagos. Join the waitlist for the first run.">
+<meta name="theme-color" content="#0f0f0f">
+<meta property="og:title" content="FRC Lagos — Join the waitlist">
+<meta property="og:description" content="Founders Running Club is launching in Lagos. Join the waitlist for the first run.">
+<meta property="og:image" content="assets/lekki-ikoyi-bridge.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Koulen&display=swap">
+<link rel="preload" as="image" href="assets/lekki-ikoyi-bridge.jpg">
+<style>
+:root{--ink:#fff;--ground:rgb(15,15,15);--display:"Koulen",Impact,"Arial Narrow",sans-serif;--text:"D-DIN Condensed","Arial Narrow","Roboto Condensed",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--m:clamp(20px,5vw,64px);--fs:clamp(18px,1.9vw,24px)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:var(--fs);line-height:1.25;letter-spacing:.01em}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto}
+.d{font-family:var(--display);font-weight:400;line-height:.84;letter-spacing:.01em;margin:0}
+.h2{font-size:clamp(48px,7vw,80px)}
+.sec{padding:clamp(56px,9vw,120px) var(--m);border-bottom:1.5px solid var(--ink)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(28px,5vw,64px)}
+p{margin:0;text-wrap:pretty}
+.stack{display:flex;flex-direction:column;gap:20px}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;background:var(--ink);color:var(--ground);border:0;border-radius:0;box-shadow:inset 0 0 0 3px var(--ink);font-family:var(--display);font-size:clamp(24px,2.6vw,32px);line-height:1;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:hover,.btn:focus-visible{background:var(--ground);color:var(--ink);outline:none}
+.btn:disabled{opacity:1;cursor:wait}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--ground)}
+.cap{display:inline-flex;align-items:center;justify-content:center;min-width:1.5em;height:1.5em;padding:0 .5em;border-radius:1350px;box-shadow:0 0 0 3px currentColor;font-weight:700}
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:clamp(24px,5vw,64px) var(--m) 30px;font-weight:700;white-space:nowrap}
+.grp{display:flex;align-items:center;gap:12px}
+.ico{width:30px;height:30px;flex-shrink:0}
+/* hero */
+.hero{position:relative;min-height:100svh;max-height:1000px;display:flex;flex-direction:column;overflow:hidden}
+.hero>*:not(img){position:relative}
+.hero-foot{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;padding:0 var(--m) clamp(32px,5vw,64px)}
+.hero h1{font-size:clamp(64px,13vw,168px)}
+/* info rows */
+.rows{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:clamp(104px,12vw,150px) minmax(0,1fr);align-items:center;gap:8px;padding:8px 0;min-height:48px}
+.row b{font-weight:700}
+.row span{text-transform:uppercase;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+/* chapters */
+.chap{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));border-top:1.5px solid var(--ink);margin-top:40px}
+.chap div{display:flex;flex-direction:column;gap:8px;padding:20px 0;border-bottom:1.5px solid var(--ink)}
+.chap .d{font-size:clamp(36px,4vw,48px);line-height:1.1}
+/* partners */
+.partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px;margin-top:40px}
+.partners div{height:clamp(140px,16vw,200px);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.partners img{width:auto;max-width:80%;mix-blend-mode:lighten}
+/* faq */
+details{border-bottom:1.5px solid var(--ink)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-weight:700;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.4em;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 22px;max-width:640px}
+/* form */
+.formsec{position:relative;overflow:hidden;border-bottom:0}
+.formsec>*:not(img){position:relative}
+.formsec .photo{filter:grayscale(1) brightness(.35)}
+form{display:flex;flex-direction:column;gap:4px}
+label.f{display:grid;grid-template-columns:clamp(104px,12vw,150px) minmax(0,1fr);align-items:end;gap:8px;padding:10px 0}
+label.f b{font-weight:700;padding-bottom:8px}
+input,select{width:100%;min-width:0;min-height:44px;background:transparent;color:inherit;border:0;border-radius:0;border-bottom:1.5px solid currentColor;font:inherit;font-size:max(16px,1em);padding:8px 0;outline:none;-webkit-appearance:none;appearance:none}
+input:focus,select:focus{border-bottom-width:3px;padding-bottom:6.5px}
+input::placeholder{color:inherit;opacity:.6}
+select{cursor:pointer}
+select option{color:#0f0f0f;background:#fff}
+.err{font-weight:700;min-height:1.25em;padding-top:8px}
+.done{display:none}
+.ok .done{display:flex}
+.ok form{display:none}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px;padding:48px var(--m)}
+footer img{height:clamp(64px,8vw,96px);width:auto}
+@media (max-width:560px){.hero-foot .btn{width:100%}.formsec .btn{width:100%}.mast{font-size:18px}.ico{width:24px;height:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<img class="photo" src="assets/lekki-ikoyi-bridge.jpg" alt="Lekki-Ikoyi Link Bridge, Lagos" fetchpriority="high">
+<div class="mast">
+<div class="grp"><img class="ico" src="assets/mark-white.svg" alt=""><span>FRC</span></div>
+<div class="grp">
+<svg class="ico" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="18" cy="7.5" r="6"/><path d="M18 13.5V36" stroke-linecap="square"/></svg>
+<span>LOS | NG</span>
+<svg class="ico" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" style="overflow:hidden" aria-hidden="true"><path d="M33 -19.5L3.09 55.39"/></svg>
+<span>WW</span>
+<svg class="ico" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="18" cy="18" r="16.5"/><ellipse cx="18" cy="18" rx="6.2" ry="16.5"/><path d="M1.5 17.7H34.5"/></svg>
+</div>
+</div>
+<div class="hero-foot">
+<h1 class="d">FOUNDERS<br>RUNNING CLUB<br>LAGOS</h1>
+<div class="stack" style="align-items:flex-start">
+<span>A NEW CHAPTER IS COMING TO LAGOS.<br>JOIN THE WAITLIST FOR THE FIRST RUN.</span>
+<a class="btn" href="#waitlist">JOIN THE WAITLIST</a>
+</div>
+</div>
+</header>
+
+<section class="sec two">
+<h2 class="d h2">WHAT FRC IS</h2>
+<div class="stack" style="max-width:520px">
+<p>Founders Running Club is a global running club for founders, operators and investors. Each city runs as a chapter with its own weekly run and its own account.</p>
+<p>The Lagos chapter brings the club to Nigeria. Runs start early, stay conversational and end with coffee.</p>
+</div>
+</section>
+
+<section class="sec two">
+<div class="stack">
+<h2 class="d h2">FIRST RUN</h2>
+<div class="rows">
+<div class="row"><b>When:</b><span>TO BE ANNOUNCED</span></div>
+<div class="row"><b>Where:</b><span>TO BE ANNOUNCED</span></div>
+<div class="row" style="align-items:start"><b>Description:</b><p>The date and meeting point go to the waitlist first.</p></div>
+</div>
+</div>
+<div class="stack">
+<h2 class="d h2">HOW RUNS WORK</h2>
+<div class="rows">
+<div class="row"><b>Distance:</b><span><i class="cap" style="font-style:normal">5</i> <b>KM</b></span></div>
+<div class="row"><b>Pace:</b><span><i class="cap" style="font-style:normal">06:30</i> <b>/ KM</b></span></div>
+<div class="row"><b>Run type:</b><span>OPEN</span></div>
+<div class="row" style="align-items:start"><b>Description:</b><p>Every pace is welcome. Groups split by pace and regroup at the finish.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<h2 class="d h2">OTHER CHAPTERS</h2>
+<div class="chap">
+<div><span class="d">SFO | US</span><span>SAN FRANCISCO</span></div>
+<div><span class="d">NYC | US</span><span>NEW YORK</span></div>
+<div><span class="d">LDN | UK</span><span>LONDON</span></div>
+<div><span class="d">BER | DE</span><span>BERLIN</span></div>
+<div><span class="d">DXB | AE</span><span>DUBAI</span></div>
+<div><span class="d">SIN | SG</span><span>SINGAPORE</span></div>
+<div><span class="d">NBO | KE</span><span>NAIROBI</span></div>
+<div><span class="d">LOS | NG</span><span>LAGOS</span></div>
+</div>
+</section>
+
+<section class="sec">
+<h2 class="d h2">PARTNERS</h2>
+<div class="partners">
+<div><img src="assets/partner-techcabal.png" alt="TechCabal" loading="lazy" style="height:55%"></div>
+<div><img src="assets/partner-grey.png" alt="Grey" loading="lazy" style="height:95%"></div>
+<div><img src="assets/partner-nxt-build.png" alt="NXT Build Africa" loading="lazy" style="height:70%"></div>
+</div>
+</section>
+
+<section class="sec two">
+<h2 class="d h2">FAQ</h2>
+<div style="border-top:1.5px solid var(--ink)">
+<details open><summary>Who can join?</summary><p>Founders, operators and investors who live or work in Lagos.</p></details>
+<details><summary>Does it cost anything?</summary><p>No. Chapter runs are free.</p></details>
+<details><summary>What pace are the runs?</summary><p>Groups run at a conversational pace. Every pace is welcome.</p></details>
+<details><summary>When is the first run?</summary><p>The date and meeting point go to the waitlist first, then to Instagram.</p></details>
+</div>
+</section>
+
+<section class="sec formsec" id="waitlist">
+<img class="photo" src="assets/national-theatre.jpg" alt="" loading="lazy">
+<div class="two" id="wl">
+<div class="stack">
+<h2 class="d" style="font-size:clamp(64px,9vw,120px)">JOIN THE<br>WAITLIST</h2>
+<span>BE FIRST TO HEAR ABOUT THE FIRST RUN.</span>
+</div>
+<div>
+<form id="form" novalidate>
+<label class="f"><b>Name:</b><input name="name" autocomplete="name" placeholder="Full name" required></label>
+<label class="f"><b>Email:</b><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@company.com" required></label>
+<label class="f"><b>Phone:</b><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="WhatsApp number"></label>
+<label class="f"><b>Instagram:</b><input name="instagram" autocapitalize="off" placeholder="@handle"></label>
+<label class="f"><b>Company:</b><input name="company" autocomplete="organization" placeholder="Company or startup"></label>
+<label class="f"><b>Role:</b><select name="role"><option value="">Select role</option><option>Founder</option><option>Investor</option><option>Operator</option><option>Other</option></select></label>
+<label class="f"><b>Area:</b><select name="area"><option value="">Select neighbourhood</option><option>Ikoyi</option><option>Victoria Island</option><option>Lekki</option><option>Ajah</option><option>Yaba</option><option>Surulere</option><option>Ikeja</option><option>Gbagada</option><option>Other</option></select></label>
+<div class="err" id="err" role="alert"></div>
+<button class="btn" type="submit" style="margin-top:20px">JOIN THE WAITLIST</button>
+</form>
+<div class="done stack" style="padding:32px 0">
+<h3 class="d h2" style="margin:0">YOU ARE ON<br>THE LIST</h3>
+<span id="thanks">THANKS. THE FIRST RUN DETAILS WILL REACH YOU BY EMAIL AND WHATSAPP.</span>
+<a class="btn ghost" href="https://instagram.com/frclagos" target="_blank" rel="noopener" style="align-self:flex-start">FOLLOW @FRCLAGOS</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<img src="assets/logo-lagos-white.png" alt="FRC Lagos" loading="lazy">
+<span>KEEP MOVING!</span>
+<a href="https://instagram.com/frclagos" target="_blank" rel="noopener" style="font-weight:700">Instagram: @FRCLAGOS</a>
+</footer>
+
+</div>
+<script>
+// Paste your Google Apps Script web app URL here (ends in /exec)
+var SHEET_URL = 'PASTE_YOUR_WEB_APP_URL_HERE';
+document.getElementById('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var form = e.target, el = form.elements, err = document.getElementById('err'), btn = form.querySelector('button');
+  var n = el.namedItem('name'), m = el.namedItem('email');
+  var name = n.value.trim(), email = m.value.trim();
+  if (!name) { err.textContent = 'Add your name to join.'; n.focus(); return; }
+  if (!/^\S+@\S+\.\S+$/.test(email)) { err.textContent = 'Add a valid email address.'; m.focus(); return; }
+  err.textContent = '';
+  btn.disabled = true; btn.textContent = 'SENDING…';
+  var data = new URLSearchParams(new FormData(form));
+  fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body: data })
+    .then(function () {
+      document.getElementById('thanks').textContent = 'THANKS, ' + name.split(' ')[0].toUpperCase() + '. THE FIRST RUN DETAILS WILL REACH YOU BY EMAIL AND WHATSAPP.';
+      document.getElementById('wl').classList.add('ok');
+    })
+    .catch(function () {
+      err.textContent = 'Something went wrong. Check your connection and try again.';
+      btn.disabled = false; btn.textContent = 'JOIN THE WAITLIST';
+    });
+});
+</script>
+</body>
+</html>
