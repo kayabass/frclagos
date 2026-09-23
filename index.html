@@ -30,6 +30,7 @@ p{margin:0;text-wrap:pretty}
 .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;background:var(--ink);color:var(--ground);border:0;border-radius:0;box-shadow:inset 0 0 0 3px var(--ink);font-family:var(--display);font-size:clamp(24px,2.6vw,32px);line-height:1;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .btn:hover,.btn:focus-visible{background:var(--ground);color:var(--ink);outline:none}
+.btn:disabled{opacity:1;cursor:wait}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--ground)}
 .cap{display:inline-flex;align-items:center;justify-content:center;min-width:1.5em;height:1.5em;padding:0 .5em;border-radius:1350px;box-shadow:0 0 0 3px currentColor;font-weight:700}
@@ -204,16 +205,27 @@ footer img{height:clamp(64px,8vw,96px);width:auto}
 
 </div>
 <script>
+// Paste your Google Apps Script web app URL here (ends in /exec)
+var SHEET_URL = 'PASTE_YOUR_WEB_APP_URL_HERE';
 document.getElementById('form').addEventListener('submit', function (e) {
   e.preventDefault();
-  var el = e.target.elements, err = document.getElementById('err');
+  var form = e.target, el = form.elements, err = document.getElementById('err'), btn = form.querySelector('button');
   var n = el.namedItem('name'), m = el.namedItem('email');
   var name = n.value.trim(), email = m.value.trim();
   if (!name) { err.textContent = 'Add your name to join.'; n.focus(); return; }
   if (!/^\S+@\S+\.\S+$/.test(email)) { err.textContent = 'Add a valid email address.'; m.focus(); return; }
   err.textContent = '';
-  document.getElementById('thanks').textContent = 'THANKS, ' + name.split(' ')[0].toUpperCase() + '. THE FIRST RUN DETAILS WILL REACH YOU BY EMAIL AND WHATSAPP.';
-  document.getElementById('wl').classList.add('ok');
+  btn.disabled = true; btn.textContent = 'SENDING…';
+  var data = new URLSearchParams(new FormData(form));
+  fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body: data })
+    .then(function () {
+      document.getElementById('thanks').textContent = 'THANKS, ' + name.split(' ')[0].toUpperCase() + '. THE FIRST RUN DETAILS WILL REACH YOU BY EMAIL AND WHATSAPP.';
+      document.getElementById('wl').classList.add('ok');
+    })
+    .catch(function () {
+      err.textContent = 'Something went wrong. Check your connection and try again.';
+      btn.disabled = false; btn.textContent = 'JOIN THE WAITLIST';
+    });
 });
 </script>
 </body>
